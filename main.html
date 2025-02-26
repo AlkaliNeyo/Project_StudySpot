@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Study Spaces at York University</title>
+
+    <style>
+      .main-background {
+        background-image: url("images/main_page_background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .navi-left {
+        display: inline-block;
+        margin-right: 800px;
+      }
+      .navi-header {
+        width: 140px;
+        height: 43px;
+        flex-shrink: 0;
+        display: inline-block;
+
+        color: #ffffff;
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 31.2px */
+      }
+      .navi-right {
+        display: inline-block;
+      }
+
+      .login-register {
+        width: 150px;
+        height: 54px;
+        flex-shrink: 0;
+
+        background-color: #fcab11;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+
+        color: #000000;
+        font-family: Inter;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 26px */
+      }
+
+      .login-register:hover {
+        background-color: #ff5e34;
+      }
+
+      .navi-button {
+        width: 90px;
+        height: 28px;
+        flex-shrink: 0;
+        display: inline-block;
+        margin-right: 10px;
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+
+        color: #ffffff;
+        font-family: Inter;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 26px */
+      }
+      .navi-button:hover {
+        color: #ff5e34;
+      }
+    </style>
+  </head>
+
+  <body class="main-background">
+    <div class="navi-left">
+      <p class="navi-header">Study Spot</p>
+
+      <button class="navi-button">Search</button>
+      <button class="navi-button">Discover</button>
+      <button class="navi-button">About Us</button>
+    </div>
+    <div class="navi-right">
+      <button class="login-register">Login | Register</button>
+    </div>
+  </body>
+</html>
