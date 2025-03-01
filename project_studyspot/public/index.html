@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Spots</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    #map { position: absolute; /* Position relative to the viewport */
+           right: 0;           /* Align the element to the right */
+           width: 75%;         /* Set width to 75% of the screen */
+           height: 600px;      /* Just a sample height */
+           background-color: lightblue; }
+  </style>
+</head>
+<body>
+  <h1>Study Spots</h1>
+  <div id="map"></div>
+  
+  <script>
+    // Initialize the map and set a default location (last var is the zoom in scale)
+    var map = L.map('map').setView([43.772597, -79.503295], 20); // Change coordinates to the university's center
+
+    // Set OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Example data for study spots (latitude, longitude, and rating)
+    var spots = [
+      { name: 'Vari Hall', lat: 43.772597, lng: -79.503295, rating: 4.5, hours: "10:00-22:00" },
+    ];
+
+    // Add markers and popups for each spot
+    spots.forEach(function(spot) {
+      var marker = L.marker([spot.lat, spot.lng]).addTo(map);
+      marker.bindPopup(`<b>${spot.name}</b><br>Rating: ${spot.rating}<br>Hours: ${spot.hours}`);
+    });
+  </script>
+</body>
+</html>
